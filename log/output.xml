@@ -1,128 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230119 10:52:05.562" rpa="false" schemaversion="3">
-<suite id="s1" name="Demo10 Travels" source="C:\Users\40032111\OneDrive - LTTS\Desktop\robot_project\Selenium_suite\demo10_travels.robot">
-<test id="s1-t1" name="TC5 Javascript" line="5">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>browser=chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230119 10:52:06.229" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20230119 10:52:06.213" endtime="20230119 10:52:09.506"/>
+<robot generator="Robot 6.0.2 (Python 3.9.13 on win32)" generated="20230119 14:18:54.962" rpa="false" schemaversion="3">
+<suite id="s1" name="Demo3" source="C:\Users\40032111\OneDrive - LTTS\Desktop\robot_project\robot_suite\demo3.robot">
+<test id="s1-t1" name="TC6" line="46">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${MY_DETAILS}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230119 14:18:55.037" endtime="20230119 14:18:55.038"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230119 10:52:09.508" endtime="20230119 10:52:10.000"/>
-</kw>
-<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
-<arg>10s</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20230119 10:52:10.000" endtime="20230119 10:52:10.000"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>url=https://phptravels.net</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230119 10:52:10.000" level="INFO">Opening url 'https://phptravels.net'</msg>
-<status status="PASS" starttime="20230119 10:52:10.000" endtime="20230119 10:52:16.519"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>document.querySelector('#checkout').value='20-6-2024'</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20230119 10:52:16.522" level="INFO">Executing JavaScript:
-document.querySelector('#checkout').value='20-6-2024'
-Without any arguments.</msg>
-<status status="PASS" starttime="20230119 10:52:16.520" endtime="20230119 10:52:16.532"/>
-</kw>
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>document.querySelector('#chackin').value='28-6-2023'</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20230119 10:52:16.536" level="INFO">Executing JavaScript:
-document.querySelector('#chackin').value='28-6-2023'
-Without any arguments.</msg>
-<msg timestamp="20230119 10:52:17.512" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-97.png"&gt;&lt;img src="selenium-screenshot-97.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20230119 10:52:17.512" level="FAIL">JavascriptException: Message: javascript error: Cannot set properties of null (setting 'value')
-  (Session info: chrome=109.0.5414.75)
-Stacktrace:
-Backtrace:
-	(No symbol) [0x006A6643]
-	(No symbol) [0x0063BE21]
-	(No symbol) [0x0053DA9D]
-	(No symbol) [0x005409E4]
-	(No symbol) [0x005408AD]
-	(No symbol) [0x005412E5]
-	(No symbol) [0x005A79F7]
-	(No symbol) [0x0058FD7C]
-	(No symbol) [0x005A6B09]
-	(No symbol) [0x0058FB76]
-	(No symbol) [0x005649C1]
-	(No symbol) [0x00565E5D]
-	GetHandleVerifier [0x0091A142+2497106]
-	GetHandleVerifier [0x009485D3+2686691]
-	GetHandleVerifier [0x0094BB9C+2700460]
-	GetHandleVerifier [0x00753B10+635936]
-	(No symbol) [0x00644A1F]
-	(No symbol) [0x0064A418]
-	(No symbol) [0x0064A505]
-	(No symbol) [0x0065508B]
-	BaseThreadInitThunk [0x76D9FEF9+25]
-	RtlGetAppContainerNamedObjectPath [0x77047BBE+286]
-	RtlGetAppContainerNamedObjectPath [0x77047B8E+238]
-</msg>
-<status status="FAIL" starttime="20230119 10:52:16.533" endtime="20230119 10:52:17.512"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//span[contain(text(),' Search by City')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20230119 10:52:17.512" endtime="20230119 10:52:17.512"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>xpath=//input[@aria-controls='select2-hotels_city-results')]</arg>
-<arg>vadodara</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20230119 10:52:17.528" endtime="20230119 10:52:17.528"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>4s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20230119 10:52:17.528" endtime="20230119 10:52:17.528"/>
-</kw>
-<status status="FAIL" starttime="20230119 10:52:06.213" endtime="20230119 10:52:17.528">JavascriptException: Message: javascript error: Cannot set properties of null (setting 'value')
-  (Session info: chrome=109.0.5414.75)
-Stacktrace:
-Backtrace:
-	(No symbol) [0x006A6643]
-	(No symbol) [0x0063BE21]
-	(No symbol) [0x0053DA9D]
-	(No symbol) [0x005409E4]
-	(No symbol) [0x005408AD]
-	(No symbol) [0x005412E5]
-	(No symbol) [0x005A79F7]
-	(No symbol) [0x0058FD7C]
-	(No symbol) [0x005A6B09]
-	(No symbol) [0x0058FB76]
-	(No symbol) [0x005649C1]
-	(No symbol) [0x00565E5D]
-	GetHandleVerifier [0x0091A142+2497106]
-	GetHandleVerifier [0x009485D3+2686691]
-	GetHandleVerifier [0x0094BB9C+2700460]
-	GetHandleVerifier [0x00753B10+635936]
-	(No symbol) [0x00644A1F]
-	(No symbol) [0x0064A418]
-	(No symbol) [0x0064A505]
-	(No symbol) [0x0065508B]
-	BaseThreadInitThunk [0x76D9FEF9+25]
-	RtlGetAppContainerNamedObjectPath [0x77047BBE+286]
-	RtlGetAppContainerNamedObjectPath [0x77047B8E+238]
-</status>
+<status status="PASS" starttime="20230119 14:18:55.030" endtime="20230119 14:18:55.038"/>
 </test>
-<status status="FAIL" starttime="20230119 10:52:05.578" endtime="20230119 10:52:17.528"/>
+<status status="PASS" starttime="20230119 14:18:54.969" endtime="20230119 14:18:55.041"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Demo10 Travels">Demo10 Travels</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Demo3">Demo3</stat>
 </suite>
 </statistics>
 <errors>
