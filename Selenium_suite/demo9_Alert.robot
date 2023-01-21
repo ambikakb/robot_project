@@ -10,4 +10,4 @@ TC1
     Click Element    xpath=//img[@alt='Go']
     ${Alert_text}  Handle Alert   action=ACCEPT
     Log To Console    ${Alert_text}
-    Should Be Equal    ${Alert_text}   Customer ID  cannot be left blank
+    Should Be Equal    ${Alert_text}   Customer ID${SPACE}${SPACE}cannot be left blank.
