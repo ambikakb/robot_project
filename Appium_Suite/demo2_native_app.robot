@@ -16,7 +16,7 @@ TC1 Sign Up
     Click Element    xpath=//*[@text='Dismiss']
     Wait Until Page Contains Element  xpath=//android.widget.ImageView[@content-desc='Settings']
     Click Element    xpath=//android.widget.ImageView[@content-desc='Settings']
-    Wait Until Page Contains Element  xpath=//android.widget.TextView[@text='Sign in']
+    Wait Until Page Contains Element  xpath=//android.widget.TextView[@text='Sign in']#
     Click Element    xpath=//android.widget.TextView[@text='Sign in']
     Wait Until Page Contains Element  xpath=//android.widget.TextView[@text='Sign up with email']
     Click Element    xpath=//android.widget.TextView[@text='Sign up with email']
@@ -59,7 +59,16 @@ TC1 Sign Up
 
 TC2
     Open Application    remote_url=http://localhost:4723/wd/hub
-    ...   platformName=android
-    ...   deviceName=infinix
-    ...   app=C:${/}Users${/}40032111${/}mobile${/}khan-academy-7-3-2.apk
-    
+    ...    platformName=android
+    ...    deviceName=Infinix
+    ...     appPackage=org.khanacademy.android
+    ...     appActivity=org.khanacademy.android.ui.library.MainActivity
+    ...     noReset=true
+     Wait Until Page Contains Element    xpath=//andriod.widget.TextView[@text='Dismiss']
+     Click Element    xpath=//andriod.widget.TextView[@text='Dismiss']
+
+    ${page_source}  Get Source
+    Log   ${page_source}
+    sleep  4s
+    [Teardown]  Close Application
+
