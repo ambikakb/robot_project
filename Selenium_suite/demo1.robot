@@ -15,6 +15,7 @@ TC2
     Input Text      id:email    helpgmail.com
     Input Password    id:pass    welcome123
     Click Element    name:login
+
     #Click Element    name:forgotten password
 
 TC3

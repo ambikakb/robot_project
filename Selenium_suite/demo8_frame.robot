@@ -41,3 +41,6 @@ TC4
     Click Element   id=signInLink
     Select Frame    xpath=//iframe[@class='modalIframe']
     Input Text    xpath=//input[@id='mobileNoInp']    12345
+    Element Should Contain    xpath=//span[contains(text(],'please enter valid')]   Please enter valid mobile number
+    Unselect Frame
+    Close Browser
