@@ -1,6 +1,5 @@
 *** Settings ***
 Library  SeleniumLibrary
-
 *** Test Cases ***
 TC1
     Open Browser  url=https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html     browser=chrome
