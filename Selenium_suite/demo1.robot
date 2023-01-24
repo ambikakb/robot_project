@@ -23,3 +23,11 @@ TC3
     Select From List By Label    id:languageSelect   English
     Input Text    id:input_username    Akb
     Input Password   id:input_password    Akb12345
+    
+TC4
+    Open Browser   browser=chrome
+    ${output}  Run Keyword And Ignore Error    Click Element    xpath=//a
+    Log To Console    ${output}
+    Log To Console    ${output}[0]
+    Log To Console    ${output}[1]
+    log    ${output}

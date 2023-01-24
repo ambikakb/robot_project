@@ -33,7 +33,7 @@ TC3 JAVASCRIPT
     #Execute Javascript   document.querySelector('#select2-hotels_city-container').value='VADODARA'
 
 
-tc4
+TC4
     Open Browser    browser=chrome
     Maximize Browser Window
     Set Selenium Implicit Wait    10s
@@ -43,7 +43,7 @@ tc4
     Click Element   xpath=//li[text()='Central Bus Station, Vadodara']
     Click Element   id=dest
 
-tc5
+TC5
     Open Browser    browser=chrome
     Maximize Browser Window
     Set Selenium Implicit Wait    10s
