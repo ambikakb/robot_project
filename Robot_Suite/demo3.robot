@@ -50,4 +50,3 @@ TC6
 TC7
     &{emp_dic}  Create Dictionary   emp_id=101  emp_name=jack   role=qa
     Log To Console    ${emp_dic}[emp_id]
-    Log Dictionary    ${EMP}

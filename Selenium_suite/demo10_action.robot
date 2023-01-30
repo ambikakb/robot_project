@@ -3,50 +3,28 @@ Library     SeleniumLibrary
 
 *** Test Cases ***
 TC1
-    Open Browser    browser=chrome
+    Open Browser   browser=edge
     Maximize Browser Window
-    Set Selenium Implicit Wait    10s
-    Go To    url=https://smallpdf.com/pdf-to-word
-    Choose File   xpath=//input[@type='file']    D:${/}OneDrive - LTTS${/}Documents${/}aparna.pdf
-    sleep  10s
+    Set Selenium Implicit Wait    30s
+    Go To    url=https://nasscom.in/
+    Mouse Over    xpath= //a[text()='Membership']
+    Click Element    xpath=//a[text()='Members Listing']
 
 TC2
-    Open Browser    browser=chrome
+    Open Browser    browser=edge
     Maximize Browser Window
-    Set Selenium Implicit Wait    10s
-    Go To    url=https://www.facebook.com
-    Input Text    css=#email    akb.com
-    Input Text    css=#pass     welcome123
-    #click on login
-    Click Element  css =button[name='login']
-
-TC3 JAVASCRIPT
-    Open Browser    browser=chrome
-    Maximize Browser Window
-    Set Selenium Implicit Wait    10s
-    Go To    url=https://www.phptravels.net/
-    Click Element   xpath=//span[contain(text(),'Search by City')]
-    Input Text    xpath=//input[@class='select2-search__field']  Vadodara
-    Click Element   xpath=
-    Execute Javascript   document.querySelector('#checkin').value='30-9-2023'
-    Execute Javascript   document.querySelector('#checkout').value='29-11-2023'
-    #Execute Javascript   document.querySelector('#select2-hotels_city-container').value='VADODARA'
+    Set Selenium Implicit Wait    30s
+    Go To    url=https://nasscom.in/
+    Mouse Over    xpath= //a[text()='Membership']
+    Mouse Over    xpath=//a[text()='Become a Member']
+    Click Element    xpath=//a[text()='Membership Benefits']
+    Click Element    xpath=//a[contains(text(),'Click to Apply Online ')]
+    Input Text    id=edit-field-company-profile-0-value    L&T
+    Click Element    id=calculate-fee
+    ${msg}     Handle Alert    action=ACCEPT     timeout=40sec
+    Log To Console    ${msg}
+    Should Be Equal    ${msg}    Please enter the total revenue greater than ZERO.
 
 
-TC4
-    Open Browser    browser=chrome
-    Maximize Browser Window
-    Set Selenium Implicit Wait    10s
-    Go To    url=https://www.redbus.in
-    Click Element   id=src
-    Input Text   id=src    Vadodara
-    Click Element   xpath=//li[text()='Central Bus Station, Vadodara']
-    Click Element   id=dest
 
-TC5
-    Open Browser    browser=chrome
-    Maximize Browser Window
-    Set Selenium Implicit Wait    10s
-    Go To    url=https://nasscom.in
-    ${ele}  Get WebElement   xpath=//a[text()='Members Listing']
-    Execute Javascript  arguments[0].click()  ARGUMENTS      ${ele}
+

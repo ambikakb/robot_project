@@ -2,23 +2,55 @@
 Library   SeleniumLibrary
 *** Test Cases ***
 
-TC5 Javascript
-    Open Browser   browser=chrome
+
+TC1
+    Open Browser    browser=chrome
     Maximize Browser Window
     Set Selenium Implicit Wait    10s
-    Go To    url=https://phptravels.net
-    Execute Javascript  document.querySelector('#checkout').value='20-6-2024'
-    Execute Javascript  document.querySelector('#chackin').value='28-6-2023'
-    Click Element    xpath=//span[contain(text(),'Search by City')]
-    Input Text    xpath=//input[@title=' Search by City')]  vadodara
-    Click Element    xpath=//span[contains(text(),'Vadodara,India')]
+    Go To    url=https://smallpdf.com/pdf-to-word
+    Choose File   xpath=//input[@type='file']    D:${/}OneDrive - LTTS${/}Documents${/}ambika.pdf
+    sleep  10s
 
+TC2
+    Open Browser    browser=chrome
+    Maximize Browser Window
+    Set Selenium Implicit Wait    10s
+    Go To    url=https://www.facebook.com
+    Input Text    css=#email    akb.com
+    Input Text    css=#pass     welcome123
+    #click on login
+    Click Element  css =button[name='login']
+
+TC3 JAVASCRIPT
+    Open Browser    browser=chrome
+    Maximize Browser Window
+    Set Selenium Implicit Wait    10s
+    Go To    url=https://www.phptravels.net/
+    Click Element   xpath=//span[contain(text(),'Search by City')]
+    Input Text    xpath=//input[@class='select2-search__field']  Vadodara
+    Execute Javascript   document.querySelector('#checkin').value='30-9-2023'
+    Execute Javascript   document.querySelector('#checkout').value='29-11-2023'
+    #Execute Javascript   document.querySelector('#select2-hotels_city-container').value='VADODARA'
     sleep  4s
 
-TC6 Javascript
-    Open Browser   browser=chrome
+
+TC4
+    Open Browser    browser=chrome
     Maximize Browser Window
     Set Selenium Implicit Wait    10s
-    Go To    url=https://www.nasscom.in
-    ${ele}  Get WebElement     xpath=//a[text(),'Members Listing']
-    Execute Javascript  arguments[0].click()  ARGUMENTS  ${ele}
+    Go To    url=https://www.redbus.in
+    Click Element   id=src
+    Input Text   id=src    Vadodara
+    Click Element   xpath=//li[text()='Central Bus Station, Vadodara']
+    Click Element   id=dest
+
+TC5
+    Open Browser    browser=chrome
+    Maximize Browser Window
+    Set Selenium Implicit Wait    10s
+    Go To    url=https://nasscom.in
+    ${ele}  Get WebElement   xpath=//a[text()='Members Listing']
+    Execute Javascript  arguments[0].click()  ARGUMENTS      ${ele}
+
+
+
